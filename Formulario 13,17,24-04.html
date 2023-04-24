@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS Externo (Formulário) - 13, 17, 24/04</title>
+    <link rel="stylesheet" href="formulario.css">
+</head>
+<body>
+   <header> <!--cabeçalho-->
+    <p>CSS Externo (Formulário) - 13, 17, 24/04</p>
+   </header>
+   <main> <!--meio-->
+            <section class="box">
+            <form>
+                <fieldset>
+                    <legend><strong>Formulario de Cliente</strong></legend>
+                        <br>
+                        <section class="formulario">
+                        <section class="inputBox" id="lb1">
+                            <input type="text" name="nome" id="name" class="inputUser" required placeholder="EX:Gabriel Correia">
+                            <label for="name"class="labelInput">Nome Completo</label>
+                        </section>
+                        <br>
+                        <section class="inputBox" id="lb2">
+                            <input type="text" name="email" id="email" class="inputUser" required placeholder="seuemail@dominio.com">
+                            <label for="name"class="labelInput">Email</label>
+                        </section>
+                        <br>
+                        <section class="inputBox" id="lb3">
+                            <input type="tel" name="telefone" id="telefone
+                            " class="inputUser" required placeholder="EX:(xx)xxxxx-xxxx">
+                            <label for="telefone"class="labelInput">Telefone</label>
+                        </section>
+
+                        <section id="sexo">
+                        <p><strong>Sexo:</strong></p>
+                        <input type="radio" name="genero" id="feminino" value="feminino">
+                        <label for="feminino">feminino</label>
+                        <br>
+                        <br>
+                        <input type="radio" name="genero" id="masculino" value="masculino">
+                        <label for="masculino">masculino</label>
+                        <br>
+                        <br>
+                        <input type="radio" name="genero" id="outro" value="outro">
+                        <label for="outro">outro</label>
+                        <br>
+                        <br>
+                        <label for="data_nascimento"><strong>Data de nascimento</strong></label>
+                        <input type="date" name="data_nascimento" id="data_nascimento" required>
+                        <br>
+                        <br>
+                        <br>
+                        </section>
+                        <section class="formulario">
+                            <section class="inputBox" id="lb1">
+                                <input type="text" name="cidade" id="cidade" class="cidade" required placeholder="EX:Cascavel">
+                                <label for="cidade"class="labelInput">Cidade</label>
+                            </section>
+                            <br>
+                            <section class="inputBox" id="lb2">
+                                <input type="text" name="Estado" id="Estado" class="Estado" required placeholder="EX:Paraná" >
+                                <label for="Estado"class="Estado">Estado</label>
+                            </section>
+                            <br>
+                            <section class="inputBox" id="lb3">
+                                <input type="text" name="Endereço" id="Endereço" class="Endereço" required placeholder="EX:Rua José limeira">
+                                <label for="Endereço"class="Endereço">Endereço</label>
+                                <br>
+                                <br>
+                                <input type="submit" value="Enviar Formulário" id="enviar">
+                            </section>
+                </fieldset>
+            </form>
+            </section>
+    </main>
+    <footer>
+        <a href="http://friv.com" target="_blank" rel="noopener noreferrer" class="friv"><p class="copyright">&copy; Copyright Samuel e Gabriel - 2023</p></a>
+    </footer>
+</body>
+</html>

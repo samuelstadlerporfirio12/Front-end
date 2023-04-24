@@ -1,0 +1,25 @@
+body{
+    background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.box{
+    color: white;
+    position: absolute;
+    top:55%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius:15px;
+    width: 30%;
+}
+
+footer{
+    position:absolute;
+    bottom:0;
+}
+
+.friv{
+    text-decoration: none;
+}
