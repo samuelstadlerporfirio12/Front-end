@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Consumidor de API com Tabela Bootstrap</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+<script>
+async function fetchApiData() {
+  const apiUrl = 'https://api.invertexto.com/v1/faker?token=6425|at4CHIcGEXPa2vbKVMksg84sWP7cr2qp&locale=pt_BR';
+  let tableContent = '';
+  for (let i = 0; i < 5; i++) {
+    const response = await fetch(apiUrl);
+    const data = await response.json();
+    tableContent += `
+      <tr>
+        <td>${data.uuid}</td>
+        <td>${data.name}</td>
+        <td>${data.cpf}</td>
+        <td>${data.birth_date}</td>
+        <td>${data.email}</td>
+      </tr>
+    `;
+  }
+  document.getElementById('apiTableBody').innerHTML = tableContent;
+}
+</script>
+</head>
+<body>
+
+<div class="container mt-5">
+  <h1>Consumidor de API com Tabela Bootstrap</h1>
+  <button class="btn btn-primary" onclick="fetchApiData()">Gerar Tabela</button>
+  <table class="table mt-3">
+    <thead class="thead-dark">
+      <tr>
+        <th>UUID</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Data de Nasc.</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody id="apiTableBody">
+      <!-- Os dados da API serÃ£o inseridos aqui -->
+    </tbody>
+  </table>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
